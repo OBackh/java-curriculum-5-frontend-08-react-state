@@ -71,3 +71,26 @@ button:focus-visible {
         background-color: #f9f9f9;
     }
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    gap: 3px;
+}
+
+.navPoint {
+    border-radius: 3px;
+    background-color: #888888;
+    color: #1a1a1a;
+    border: 1px solid #535bf2;
+    padding: 0px 8px 0px 8px;
+}
+
+.navPoint:hover {
+    color: #fff;
+}
+
+.createFormContainer {
+
+    width: 60%
+}

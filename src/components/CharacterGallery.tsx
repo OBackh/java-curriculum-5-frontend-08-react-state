@@ -5,11 +5,16 @@ import "./CharacterGallery.css";
 type CharacterGalleryProps = {
     characters: Character[];
 }
-export default function CharacterGallery(props: Readonly<CharacterGalleryProps>) {
-    const cards = props.characters.map((character) => <CharacterCard key={character.name} character={character}/>);
+
+export default function CharacterGallery({characters}: CharacterGalleryProps) {
     return (
-        <div className="character-gallery">
-            {cards}
+        <div>
+            <h3>Character List:</h3>
+            <ul>
+                {characters.map((char, index) => (
+                    <li key={index}>{char.name} - {char.species} - {char.status}</li>
+                ))}
+            </ul>
         </div>
     );
 }

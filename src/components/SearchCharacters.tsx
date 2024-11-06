@@ -1,13 +1,22 @@
 import '../App.css'
 import CharacterGallery from "./CharacterGallery.tsx";
 import {useState} from "react";
-import {characters} from "../Characters.ts";
 
-export default function SearchCharacters() {
-    const [searchText, setSearchText] = useState("");
+type Character = {
+    name: string;
+    species: string;
+    status: string;
+};
 
-    const filteredCharacters = characters
-        .filter((character) => character.name.toLowerCase().includes(searchText.toLowerCase()));
+type SearchCharactersProps = {
+    characters: Character[];
+}
+
+export default function SearchCharacters({characters}: SearchCharactersProps) {
+    const [searchText, setSearchText] = useState<string>("");
+    const filteredCharacters: Character[] = characters.filter((character) =>
+        character.name.toLowerCase().includes(searchText.toLowerCase())
+    );
 
     return (
         <>
