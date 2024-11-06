@@ -14,6 +14,7 @@ type SearchCharactersProps = {
 
 export default function SearchCharacters({characters}: SearchCharactersProps) {
     const [searchText, setSearchText] = useState<string>("");
+    console.log("Characters Props:", characters); // Debug-Ausgabe
     const filteredCharacters: Character[] = characters.filter((character) =>
         character.name.toLowerCase().includes(searchText.toLowerCase())
     );
