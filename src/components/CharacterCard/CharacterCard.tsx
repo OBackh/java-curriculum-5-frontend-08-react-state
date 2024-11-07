@@ -1,4 +1,4 @@
-import {Character} from "../types/RickAndMortyCharacter.ts";
+import {Character} from "../../types/RickAndMortyCharacter.ts";
 import "./CharacterCard.css";
 import {useNavigate} from "react-router-dom";
 

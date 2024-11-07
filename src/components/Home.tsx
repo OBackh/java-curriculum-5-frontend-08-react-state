@@ -8,11 +8,16 @@ export default function Home() {
         navigate("/characters");
     }
 
+    function gotoCreateNewCharacter() {
+        navigate("/create-new-character");
+    }
+
     return (
         <div>
             <h1>Homepage</h1>
             <p>Welcome to my new Website!</p>
-            <button onClick={gotoCharcters}>Gehe zu den Charcteren!</button>
+            <button onClick={gotoCharcters}>Gehe zu der Character-Liste</button>
+            <button onClick={gotoCreateNewCharacter}>Erstelle neue Charactere</button>
         </div>
     );
 }

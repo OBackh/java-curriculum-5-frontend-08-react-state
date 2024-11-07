@@ -13,6 +13,7 @@ export type Character = {
     created: string
 }
 
+
 export type Origin = {
     name: string,
     url: string
@@ -22,4 +23,11 @@ export type Origin = {
 export type Location = {
     name: string,
     url: string
+}
+
+export type PageInfo = {
+    count: number,
+    pages: number,
+    prev: string,
+    next: string
 }
