@@ -74,8 +74,8 @@ button:focus-visible {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
-    gap: 3px;
+    justify-content: center;
+    gap: 10px;
 }
 
 .navPoint {
@@ -83,7 +83,7 @@ button:focus-visible {
     background-color: #888888;
     color: #1a1a1a;
     border: 1px solid #535bf2;
-    padding: 0px 8px 0px 8px;
+    padding: 0 8px 0 8px;
 }
 
 .navPoint:hover {

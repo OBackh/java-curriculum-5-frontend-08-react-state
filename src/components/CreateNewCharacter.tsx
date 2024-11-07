@@ -3,7 +3,8 @@ import {ChangeEvent, FormEvent, useState} from "react";
 type Character = {
     name: string,
     species: string,
-    status: string
+    status: string,
+    image: string
 }
 
 type CreateNewCharacterProps = {
@@ -12,7 +13,7 @@ type CreateNewCharacterProps = {
 
 export default function CreateNewCharacter({onAddCharacter}: CreateNewCharacterProps) {
 
-    const [character, setCharacter] = useState<Character>({name: "", species: "", status: ""})
+    const [character, setCharacter] = useState<Character>({name: "", species: "", status: "", image: "https://rickandmortyapi.com/api/character/avatar/19.jpeg"})
 
     const onCharacterChange = (event: ChangeEvent<HTMLInputElement>) => {
         setCharacter({...character, [event.target.name]: event.target.value})
@@ -29,7 +30,7 @@ const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     //Add new char
     onAddCharacter(character);
     //Reset form
-    setCharacter({ name: "", species: "", status: ""});
+    setCharacter({ name: "", species: "", status: "", image: ""});
 
     }
 
